@@ -99,9 +99,9 @@
 		69A9E6622680D26C000BD76B /* ClassifierDemo */ = {
 			isa = PBXGroup;
 			children = (
+				69A9E6932680DD7E000BD76B /* Controller */,
 				69A9E6632680D26C000BD76B /* AppDelegate.swift */,
 				69A9E6652680D26C000BD76B /* SceneDelegate.swift */,
-				69A9E6672680D26C000BD76B /* ViewController.swift */,
 				69A9E6692680D26C000BD76B /* Main.storyboard */,
 				69A9E66C2680D270000BD76B /* Assets.xcassets */,
 				69A9E66E2680D270000BD76B /* LaunchScreen.storyboard */,
@@ -126,6 +126,14 @@
 				69A9E6872680D270000BD76B /* Info.plist */,
 			);
 			path = ClassifierDemoUITests;
+			sourceTree = "<group>";
+		};
+		69A9E6932680DD7E000BD76B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				69A9E6672680D26C000BD76B /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
