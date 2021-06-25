@@ -39,7 +39,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     func processClassifications(for request: VNRequest, error: Error?) {
             DispatchQueue.main.async {
                 guard let results = request.results else {
-                    self.classificationLabel.text = "Unable to classify image.\n\(error!.localizedDescription)"
+                    self.classificationLabel.text = "Unable to classify image.\n\(error?.localizedDescription)"
                     return
                 }
                 let classifications = results as! [VNClassificationObservation]
