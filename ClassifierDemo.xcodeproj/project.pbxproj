@@ -15,6 +15,8 @@
 		69A9E6702680D270000BD76B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A9E66E2680D270000BD76B /* LaunchScreen.storyboard */; };
 		69A9E67B2680D270000BD76B /* ClassifierDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A9E67A2680D270000BD76B /* ClassifierDemoTests.swift */; };
 		69A9E6862680D270000BD76B /* ClassifierDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A9E6852680D270000BD76B /* ClassifierDemoUITests.swift */; };
+		69A9E697268224F2000BD76B /* MLModelSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A9E696268224F1000BD76B /* MLModelSetup.swift */; };
+		69A9E69926837FAD000BD76B /* AnimalClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 69A9E69826837FAD000BD76B /* AnimalClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		69A9E6812680D270000BD76B /* ClassifierDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassifierDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A9E6852680D270000BD76B /* ClassifierDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifierDemoUITests.swift; sourceTree = "<group>"; };
 		69A9E6872680D270000BD76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69A9E696268224F1000BD76B /* MLModelSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLModelSetup.swift; sourceTree = "<group>"; };
+		69A9E69826837FAD000BD76B /* AnimalClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = AnimalClassifier.mlmodel; path = ../../Desktop/AnimalClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		69A9E6572680D26C000BD76B = {
 			isa = PBXGroup;
 			children = (
+				69A9E69826837FAD000BD76B /* AnimalClassifier.mlmodel */,
 				69A9E6622680D26C000BD76B /* ClassifierDemo */,
 				69A9E6792680D270000BD76B /* ClassifierDemoTests */,
 				69A9E6842680D270000BD76B /* ClassifierDemoUITests */,
@@ -106,6 +111,7 @@
 				69A9E66C2680D270000BD76B /* Assets.xcassets */,
 				69A9E66E2680D270000BD76B /* LaunchScreen.storyboard */,
 				69A9E6712680D270000BD76B /* Info.plist */,
+				69A9E696268224F1000BD76B /* MLModelSetup.swift */,
 			);
 			path = ClassifierDemo;
 			sourceTree = "<group>";
@@ -267,7 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				69A9E6682680D26C000BD76B /* ViewController.swift in Sources */,
+				69A9E69926837FAD000BD76B /* AnimalClassifier.mlmodel in Sources */,
 				69A9E6642680D26C000BD76B /* AppDelegate.swift in Sources */,
+				69A9E697268224F2000BD76B /* MLModelSetup.swift in Sources */,
 				69A9E6662680D26C000BD76B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

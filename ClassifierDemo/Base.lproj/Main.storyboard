@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,39 +17,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsx-dV-gR1">
-                                <rect key="frame" x="16" y="611.5" width="382" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a photo of your pet to show the classification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsx-dV-gR1">
+                                <rect key="frame" x="16" y="611" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nzl-FL-B2a">
-                                <rect key="frame" x="16" y="164" width="382" height="415.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-photo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzl-FL-B2a">
+                                <rect key="frame" x="16" y="164" width="382" height="415"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="415" id="L3R-GL-rAW"/>
+                                    <constraint firstAttribute="width" constant="382" id="vpq-tF-LoL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RET-Rs-Ctu">
-                                <rect key="frame" x="16" y="682" width="382" height="30"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RET-Rs-Ctu">
+                                <rect key="frame" x="56" y="682" width="302" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Add Photo"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loadImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nWr-Ga-SoZ"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoL-Q5-dDi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" systemColor="systemBackgroundColor"/>
+                                <items>
+                                    <navigationItem title="Animal Classifier" id="pRm-9K-5q9"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nzl-FL-B2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="55k-Nr-XHL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RET-Rs-Ctu" secondAttribute="bottom" constant="150" id="AhI-Zq-Yyq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RET-Rs-Ctu" secondAttribute="trailing" constant="16" id="GYf-Ns-0Wq"/>
+                            <constraint firstItem="GoL-Q5-dDi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hhz-Md-BFh"/>
                             <constraint firstItem="RET-Rs-Ctu" firstAttribute="top" secondItem="xsx-dV-gR1" secondAttribute="bottom" constant="50" id="Qjf-B7-KxG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RET-Rs-Ctu" secondAttribute="trailing" constant="56" id="ZSi-j2-lJ6"/>
                             <constraint firstItem="xsx-dV-gR1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aqT-fl-cjS"/>
                             <constraint firstItem="nzl-FL-B2a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="dfV-aM-lCq"/>
-                            <constraint firstItem="RET-Rs-Ctu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eFI-0J-sUJ"/>
+                            <constraint firstItem="GoL-Q5-dDi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gTx-Pj-hhQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nzl-FL-B2a" secondAttribute="trailing" constant="16" id="kiX-ib-tyx"/>
                             <constraint firstItem="xsx-dV-gR1" firstAttribute="top" secondItem="nzl-FL-B2a" secondAttribute="bottom" constant="32" id="n4d-8q-gEx"/>
+                            <constraint firstItem="RET-Rs-Ctu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="uk2-XH-ZrF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xsx-dV-gR1" secondAttribute="trailing" constant="16" id="xx4-0j-OYU"/>
+                            <constraint firstItem="GoL-Q5-dDi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yWs-YB-38q"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="classificationLabel" destination="xsx-dV-gR1" id="uCj-YW-ibv"/>
                         <outlet property="imageView" destination="nzl-FL-B2a" id="G8T-Ey-TPc"/>
                     </connections>
                 </viewController>
@@ -58,6 +88,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="empty-photo" width="640" height="640"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
